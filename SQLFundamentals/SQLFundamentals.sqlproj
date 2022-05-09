@@ -67,4 +67,7 @@
     <Build Include="Employees\Tables\Employee.sql" />
     <Build Include="Employees\Tables\Company.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Employees\Tables\Script.PostDeployment1.sql" />
+  </ItemGroup>
 </Project>
