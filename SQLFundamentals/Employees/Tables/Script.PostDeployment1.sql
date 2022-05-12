@@ -10,21 +10,17 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 INSERT INTO dbo.Person (Id, FirstName, LastName)
-SELECT 1, 'Jakhongir', 'Bakhodirov'
-WHERE not exists (SELECT 1 FROM  dbo.Person WHERE Id = 1)
+VALUES (3, 'Jim', 'Carrey'), (4, 'Leonardo ', 'DiCaprio')
 GO
 
 INSERT INTO dbo.Address (Id, Street, City, State, ZipCode)
-SELECT 1, 'Feruza', 'Tashkent', 'Uzbekistan', '100100'
-WHERE not exists (SELECT 1 FROM  dbo.Address WHERE Id = 1)
+VALUES (3, 'Ontario', 'Toronto', 'Canada', '300300'), (4, 'Los Angeles', 'California', 'USA', '400400')
 GO
 
 INSERT INTO dbo.Employee (Id, AddressId, PersonId, CompanyName, Position, EmployeeName)
-SELECT 1, 1, 1, 'EPAM', 'Software Engineer', 'Jakhongir Bakhodirov'
-WHERE not exists (SELECT 1 FROM  dbo.Employee WHERE Id = 1)
+VALUES (3, 3, 3, 'Hollywood', 'Comedian', 'Jim Carrey'), (4, 4, 4, 'Hollywood', 'Actor', 'Leonardo DiCaprio')
 GO
 
 INSERT INTO dbo.Company (Id, Name, AddressId)
-SELECT 1, 'EPAM', 1
-WHERE not exists (SELECT 1 FROM  dbo.Company WHERE Id = 1)
+VALUES (3, 'Hollywood', 3), (4, 'Hollywood', 4)
 GO
